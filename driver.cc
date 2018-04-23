@@ -10,8 +10,8 @@
 #include "cdk.h"
 
 
-#define MATRIX_WIDTH 4
-#define MATRIX_HEIGHT 3
+#define MATRIX_WIDTH 3
+#define MATRIX_HEIGHT 5
 #define BOX_WIDTH 15
 #define MATRIX_NAME_STRING "Test Matrix"
 

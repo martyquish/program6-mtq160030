@@ -39,16 +39,16 @@ CC = gcc
 CCFLAGS = 	 
 
 #C++ compiler flags
-CXXFLAGS =
+CXXFLAGS = -Wall -g
 
 #C preprocessor flags
-CPPFLAGS = -Wall
+CPPFLAGS = -Wall -I /scratch/perkins/include/
 
 #C/C++ Linker Flags
-LDFLAGS =
+LDFLAGS = -L/scratch/perkins/lib
 
 #C/C++ External Library Paths
-LDLIBS =
+LDLIBS = -lcdk -lcurses
 
 # --- Configure Lex/Flex ---
 
@@ -70,7 +70,7 @@ YFLAGS = -dy
 all: $(EXEC)
 
 clean:
-	rm $(JUNK) $(OBJS) 2> $(LOG) || true
+	rm $(JUNK) $(OBJS) $(EXEC) 2> $(LOG) || true
 
 backup:
 	@echo "Cleaning Project..."
@@ -86,5 +86,5 @@ backup:
 	@mv $(BACKUPNAME) $(BACKUPPATH)
 	@echo "Done!"
 $(EXEC):$(OBJS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) $(OBJS)
+	$(CXX) -o $(EXEC) $(OBJS) $(LDFLAGS) $(LDLIBS) 
 

@@ -2,3 +2,5 @@
 *~
 \#*\#
 
+# Ignore Make logfile
+make.log

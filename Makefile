@@ -12,7 +12,7 @@ PROJNAME = program6
 EXEC = prog6
 
 # All object files necessary to build the above executable
-OBJS = driver.o
+OBJS = driver.o binio.o
 
 # Specify any intermediary files which should not be automatically cleaned during implicit chaining.
 .PRECIOUS =

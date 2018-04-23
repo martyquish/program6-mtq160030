@@ -8,7 +8,8 @@
 
 #include <iostream>
 #include "cdk.h"
-
+#include "program6.h"
+#include "classes.h"
 
 #define MATRIX_WIDTH 3
 #define MATRIX_HEIGHT 5
@@ -68,6 +69,7 @@ int main()
   /*
    * Dipslay a message
    */
+  
   setCDKMatrixCell(myMatrix, 2, 2, "Test Message");
   drawCDKMatrix(myMatrix, true);    /* required  */
 

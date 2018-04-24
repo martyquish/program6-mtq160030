@@ -1,3 +1,6 @@
+// Author: Martin Quish
+// Class: CS 3377.502
+// Email: mtq160030@utdallas.edu
 #include <fstream>
 #include <cstddef>
 #include "classes.h"

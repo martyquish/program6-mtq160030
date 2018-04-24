@@ -136,7 +136,8 @@ void writeRecordsToMatrix(CDKMATRIX* matrix, int numRecords){
   // Iterate through the number of records
   for(int i=0; i<numRecords; i++){
     // If the current record read returned null, there was a read error. Exit the loop and don't display any more information on CDK matrix
-    if(currentRecord==NULL) break;
+    // We should only read a maximum of 4 records, so break if the current record is past the 4th record
+    if(currentRecord==NULL || i>3) break;
 
 
     // Get the length of the record's string in printable string format using stringstream

@@ -77,7 +77,9 @@ int main()
   /*
    * Dipslay a message
    */
+  // Write the header info to the matrix and get the number of records from the header
   int numRecords = writeHeaderToMatrix(myMatrix);
+  // Write the records to the matrix
   writeRecordsToMatrix(myMatrix, numRecords);
   drawCDKMatrix(myMatrix, true);    /* required  */
 

@@ -1,4 +1,5 @@
 #include <fstream>
+#include <cstddef>
 #include "classes.h"
 #include "program6.h"
 
@@ -30,7 +31,7 @@ BinaryFileRecord* readRecord(){
 
   // If we have reached the end of the file, return a blank record.
   if(numRecords==currentRecord)
-    return new BinaryFileRecord();
+    return NULL;
 
   // Create a new record to store the read information in
   BinaryFileRecord* record = new BinaryFileRecord();
